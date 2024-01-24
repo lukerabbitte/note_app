@@ -19,6 +19,7 @@ const App = () => {
     noteService
       .getAll()
       .then(response => {
+        console.log(`Response is the following: \n${response.data}`)
         setNotes(response.data)
       })
   }, [])

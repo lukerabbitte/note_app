@@ -10,9 +10,9 @@ app.use(express.static('dist'))
 
 let notes = [
     {
-        "id": "24de8d36-ec96-47f6-a219-6e2554c535b8",
-        "content": "EFEFDddddEFEF",
-        "important": true
+        id: "877486e9-441f-4b3e-b460-d2da6ea81984",
+        content: "Hello",
+        important: true
     }
 ]
 
