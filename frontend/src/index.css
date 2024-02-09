@@ -74,6 +74,17 @@ button:focus-visible {
   font-size: 15px;
 }
 
+.note button {
+  /* Style for buttons within .note */
+  margin-right: 5px;
+}
+
+.note form {
+  /* Style for form within .note */
+  display: flex;
+  align-items: center;
+}
+
 .error {
   color: rgb(255, 113, 113);
   padding-top: 5px;

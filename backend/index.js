@@ -58,6 +58,7 @@ app.put('/api/notes/:id', (req, res) => {
         note.important = req.body.important
     }
 
+    console.log(`The updated note is ${req.body.content}.`)
     console.log(`The final important value is ${note.important}.`)
 
     res.status(200).json(note)

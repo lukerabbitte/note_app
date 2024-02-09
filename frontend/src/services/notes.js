@@ -1,5 +1,6 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/api/notes' // TODO change if we are using web deploy.
+// const baseUrl =  // TODO change if we are using web deploy.
+const baseUrl = '/api/notes'
 
 const getAll = () => {
   return axios.get(baseUrl)
