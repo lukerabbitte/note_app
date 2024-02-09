@@ -1,13 +1,11 @@
 const Footer = () => {
-    const footerStyle = {
-        color: 'green',
-        fontStyle: 'italic',
-        fontSize: 16
-    }
+
+    const year = new Date().getFullYear();
+
     return (
-        <div style={footerStyle}>
-        <br />
-        <em>Luke's Notes App</em>
+        <div class='footer'>
+            <br />
+            <em>&copy; {year} Luke Rabbitte</em>
         </div>
     )
 }

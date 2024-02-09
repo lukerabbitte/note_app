@@ -9,8 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 const App = () => { 
 
   const [notes, setNotes] = useState([])
-  const [newNote, setNewNote] = useState('Add note...')
-  const [updatedNoteMessage, setUpdatedNoteMessage] = useState(null)
+  const [newNote, setNewNote] = useState(null)
   const [showAll, setShowAll] = useState(true)
   const [stringSearch, setStringSearch] = useState(false)
   const [stringToSearch, setStringToSearch] = useState('')
@@ -52,10 +51,6 @@ const App = () => {
       .update(updatedNote.id, updatedNote)
       .then(response => {
         setNotes(notes.map(note => note.id !== updatedNote.id ? note : response.data));
-        setUpdatedNoteMessage('Updated!');
-        setTimeout(() => {
-          setUpdatedNoteMessage(null)
-        }, 2000)
       })
       .catch(error => {
         alert('An error occurred while updating the note');
@@ -107,27 +102,28 @@ const App = () => {
     <div>
       <h1>Notes</h1>
       <Notification message={errorMessage}/>
-      <div>
-        <p>Substring to search</p>
+      <div class='substring-search'>
         <input value={stringToSearch} onChange={handleStringSearch}/>
+        🔍
       </div>
+      {/* 
       <div>
         <button onClick={filterByImportance}>
           Show {showAll ? 'Important' : 'All' }
         </button>
       </div>
-      <ul>
+    */}
+      <ul class='notes'>
         {filteredNotes.map(note => 
           <Note 
             key={note.id} 
             note={note}
             deleteNote={() => deleteNote(note.id)} 
             updateNote={updateNote}
-            updatedNoteMessage={updatedNoteMessage}
           />
         )}
       </ul>
-      <form onSubmit={addNote}>
+      <form class='add-note-form' onSubmit={addNote}>
         <input value={newNote} onChange={handleInputChange}/>
         <button type="submit">Post Tweet</button>
       </form>

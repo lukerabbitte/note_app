@@ -5,13 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  background-color: #ebd5d5;
 }
 
 a {
@@ -24,9 +18,11 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  font-size: 14px;
+  color: rgb(38, 61, 66);
+  padding: 15px;
   display: flex;
-  place-items: center;
+  place-items:baseline;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -37,7 +33,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -48,45 +44,102 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #ff0000;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+input {
+  font-family: inherit;
+}
+
+.notes {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.substring-search {
+  display: flex;
+  gap: 10px;
+}
+
+.substring-search input {
+  background-color: rgb(200, 200, 200);
+  color: rgb(38, 61, 66);
 }
 
 .note {
-  color: rgb(212, 255, 212);
+  gap: 10px;
   padding-top: 5px;
   font-size: 15px;
+  display:flex;
+  align-items:center;
+  justify-content:baseline;
 }
 
-.note button {
-  /* Style for buttons within .note */
-  margin-right: 5px;
+.delete-note-button {
+  color: rgb(200, 200, 200);
+  background-color: rgb(38, 61, 66);
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
 }
 
-.note form {
-  /* Style for form within .note */
-  display: flex;
-  align-items: center;
+.edit-note-form {
+  display:flex;
+  align-items:center;
+  justify-content:baseline;
+  gap: 10px;
+  padding: 10px;
+}
+
+.edit-note-form input {
+  background-color: rgb(200, 200, 200);
+  color: rgb(38, 61, 66);
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.edit-note-form button {
+  background-color: rgb(200, 200, 200);
+  color: rgb(38, 61, 66);
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.add-note-form {
+  font-size: 1.2em;
+  display:flex;
+  align-items:center;
+  justify-content:baseline;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgb(214, 158, 158);
+  border-radius: 6px;
+}
+
+.add-note-form input {
+  background-color: rgb(107, 137, 144);
+  color: rgb(54, 46, 46);
+  padding: 5px;
+  border: none;
+  border-radius: 6px;
+}
+
+.add-note-form button {
+  background-color: rgb(107, 137, 144);
+  color: rgb(38, 61, 66);
+  border: none;
+  padding: 5px;
+  border-radius: 6px;
 }
 
 .error {
-  color: rgb(255, 113, 113);
+  color: rgb(95, 23, 23);
   padding-top: 5px;
   font-size: 15px;
 }
